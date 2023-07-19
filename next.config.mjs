@@ -18,8 +18,10 @@ const config = {
   },
   async redirects() {
     const redirects = await getRedirects();
-    console.log(redirects);
-    return redirects
+    return[
+      ...redirects.map( r => r)
+    ]
+
   },
 }
 
