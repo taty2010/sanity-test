@@ -20,13 +20,6 @@ const config = {
     config.experiments = { ...config.experiments, topLevelAwait: true }
     return config
   },
-  async redirects() {
-    const redirects = await getRedirects();
-    return[
-      ...redirects.map( r => r)
-    ]
-
-  },
 }
 
 export default config
