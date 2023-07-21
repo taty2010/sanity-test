@@ -2,8 +2,10 @@ import { CustomPortableText } from 'components/shared/CustomPortableText'
 import { Header } from 'components/shared/Header'
 import Layout from 'components/shared/Layout'
 import ScrollUp from 'components/shared/ScrollUp'
+import Image from 'next/image'
 import type { PagePayload, SettingsPayload } from 'types'
 
+import image from "../../../public/giraffe.jpg"
 import PageHead from './PageHead'
 
 export interface PageProps {
@@ -33,6 +35,12 @@ export function Page({
           <div className="mb-14">
             {/* Header */}
             <Header title={title} description={overview} />
+            <Image
+              src={image}
+              width={500}
+              height={500}
+              alt="Picture of the author"
+            />
 
             {/* Body */}
             {body && (
